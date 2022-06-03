@@ -11,7 +11,7 @@
     <a class="btn btn-success" href="@Url.Action("Add","Category")">Add Category</a>
 </div>
 <div>
-    <ul>
+    <ol>
         @foreach (var cat in Model)
         {
             <li>
@@ -27,5 +27,5 @@
             </li>
 
         }
-    </ul>
+    </ol>
 </div>
