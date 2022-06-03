@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        <label>Name:</label>
+        <input type="text" name="name" />
+        <input class="btn btn-success" type="submit" value="Add" />
+    </div>
+}
+

@@ -1,0 +1,31 @@
+﻿@using To_Do_List.Models
+@model List<To_Do_List.Models.Category>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>To Do List</h1>
+
+<div>
+    <a class="btn btn-success" href="@Url.Action("Add","Category")">Add Category</a>
+</div>
+<div>
+    <ul>
+        @foreach (var cat in Model)
+        {
+            <li>
+                <h3>@cat.Name <span><a class="btn btn-danger" href="@Url.Action("Add","Item", new { id = cat.ID})">Add Item</a></span></h3>
+                <ul>
+                    @foreach (var item in cat.Item)
+                    {
+                        <li>
+                            @item.Name
+                        </li>
+                    }
+                </ul>
+            </li>
+
+        }
+    </ul>
+</div>
